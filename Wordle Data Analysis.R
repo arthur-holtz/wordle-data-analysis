@@ -26,9 +26,9 @@ word_list = substr(
   str_locate(wordle_script_text, "cigar")[,"start"],
   # shave is the last word
   str_locate(wordle_script_text, "shave")[,"end"]) %>%
-  # remove slashes
+  # remove quotation marks
   str_remove_all("\"") %>%
-  # split using commas
+  # split at commas
   str_split(",") %>%
   # convert to DF
   data.frame() %>%
