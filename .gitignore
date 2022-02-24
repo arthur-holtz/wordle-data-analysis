@@ -38,11 +38,10 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-*.Rmd
-
 *.DS_Store
 
 Icon?
 ![iI]con[_a-zA-Z0-9]
 
 *.png
+*.html
