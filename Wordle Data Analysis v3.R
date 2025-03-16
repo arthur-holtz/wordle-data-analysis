@@ -57,7 +57,7 @@ score_one_word = function(guess, dict, pos_score = 3, let_score = 2) {
 }
 
 ##### download game script #####
-url = "https://www.nytimes.com/games/wordle/main.18637ca1.js"
+url = "https://www.nytimes.com/games-assets/v2/3550.a8dc98cc4aa2289b8f04.js"
 wordle_script_text = GET(url) %>%
   content(as = "text", encoding = "UTF-8")
 
@@ -70,8 +70,8 @@ target_word_df <- substr(
   wordle_script_text,
   # cigar is the first word
   str_locate(wordle_script_text, "cigar")[,"start"],
-  # shave is the last word
-  str_locate(wordle_script_text, "shave")[,"end"]) %>%
+  # augur is the last word
+  str_locate(wordle_script_text, "augur")[,"end"]) %>%
   str_remove_all("\"") %>%
   str_split(",") %>%
   unlist(.) %>%
